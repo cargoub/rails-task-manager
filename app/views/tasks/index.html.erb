@@ -6,13 +6,13 @@
       <h1> Tasks view</h1>
 
 <%= form_tag 'display' %>
-<% @tasks.each do |task| %>
+<% @task.each do |task| %>
   <tr>
-   <td> <%= task.title %></td>
+
    <td><%= check_box("display", task.id) %></td>
+   <td><%= link_to task.title, task_path(task.id) %></td>
   </tr>
 <% end %>
-
     </div>
 
   </div>
