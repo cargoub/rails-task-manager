@@ -1,0 +1,22 @@
+
+<div class = "container">
+  <div class = "row">
+    <div class = "col">
+
+      <h1> Tasks view</h1>
+
+<%= form_tag 'display' %>
+<% @tasks.each do |task| %>
+  <tr>
+   <td> <%= task.title %></td>
+   <td><%= check_box("display", task.id) %></td>
+  </tr>
+<% end %>
+
+    </div>
+
+  </div>
+</div>
+
+
+
